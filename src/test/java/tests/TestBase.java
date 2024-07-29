@@ -20,8 +20,8 @@ public class TestBase {
 
         String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud");
         String auth = System.getProperty("auth", "user1:1234");
-        Configuration.remote = "https://" + auth + "@" + remoteUrl + "/wd/hub";
 
+        Configuration.remote = "https://" + auth + "@" + remoteUrl + "/wd/hub";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
 
@@ -35,7 +35,7 @@ public class TestBase {
     }
 
     @AfterEach
-    void addAttachements() {
+    void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
