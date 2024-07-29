@@ -46,12 +46,11 @@ tasks.withType(Test) {
     }
 }
 
-task registration_test(type: Test) {
+tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
-        def typeTag = System.getProperty("type", "").trim()
-        if (!typeTag.isEmpty()) {
-            includeTags(typeTag)
+        if (System.getProperty("type") != null && !System.getProperty("type").isEmpty()) {
+            includeTags (System.getProperty("type"))
         }
     }
 }
