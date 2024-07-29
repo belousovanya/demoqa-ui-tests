@@ -8,13 +8,13 @@ import utils.TestData;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("smoke")
 public class StudentRegistrationFormWithFakerTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
     ResultTableComponent resultTableComponent = new ResultTableComponent();
     TestData testData = new TestData();
 
+    @Tag("smoke")
     @Test
     public void successfulRegistrationWithFakerTest() {
         step("Открыть форму регистрации", () -> {
@@ -54,6 +54,7 @@ public class StudentRegistrationFormWithFakerTests extends TestBase {
         });
     }
 
+    @Tag("smoke")
     @Test
     public void successfulRegistrationUsingRequiredFieldsWithFakerTest() {
         step("Открыть форму регистрации", () -> {
@@ -78,6 +79,7 @@ public class StudentRegistrationFormWithFakerTests extends TestBase {
         });
     }
 
+    @Tag("negative")
     @Test
     public void RegistrationWithoutFirstNameWithFakerTest() {
         step("Открыть форму регистрации", () -> {
