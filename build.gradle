@@ -50,7 +50,7 @@ task registration_test(type: Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform {
         def typeTag = System.getProperty("type", "").trim()
-        if (typeTag) {
+        if (!typeTag.isEmpty()) {
             includeTags(typeTag)
         }
     }
