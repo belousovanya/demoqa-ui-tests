@@ -15,7 +15,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "124");
+        Configuration.browserVersion = System.getProperty("version", "99.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
         String remoteUrl = System.getProperty("remoteUrl", "selenoid.autotests.cloud");
